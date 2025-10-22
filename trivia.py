@@ -17,6 +17,7 @@ class TriviaGame:
         pass
 
     def start_game(self):
+        print("Trivia Game Script Running")
         """
         STEP 1:
         - Print a welcome message.
