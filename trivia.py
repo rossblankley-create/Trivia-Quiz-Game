@@ -4,7 +4,7 @@
 # You will complete the TriviaGame methods below.
 # Follow the step-by-step instructions in the project doc.
 
-import random
+
 from questions import question_bank  # Import the question list
 
 class TriviaGame:
@@ -29,7 +29,7 @@ class TriviaGame:
 	        - Use random.shuffle() on question_bank before the for loop to randomize.
         """
 
-        pass
+        pass  # TODO: Implement the logic described above.
 
 
     def ask_question(self, question):

@@ -63,7 +63,7 @@ Python - trivia.py
 
 ```python
     # STEP 3: Check if the answer is correct
-    if answer == question["answer"]:
+    if answer.strip().lower() == question["answer"]:
         print("Correct!")
         self.score += 1
     else:
@@ -81,6 +81,11 @@ Python - trivia.py
 Python - trivia.py
 
 ```python
+def start_game(self):
+    # ...
+    # After all questions, show the final score
+    self.show_score()
+
 def show_score(self):
     """
     STEP 4:
