@@ -4,7 +4,8 @@
 # You will complete the TriviaGame methods below.
 # Follow the step-by-step instructions in the project doc.
 
-
+import random
+import time
 from questions import question_bank  # Import the question list
 
 class TriviaGame:
@@ -14,42 +15,68 @@ class TriviaGame:
     """
 
     def __init__(self, questions):
-        pass
+		# Store question bank
+        self.question_bank = questions
+		# Initialize score
+	    self.score = 0
 
     def start_game(self):
         print("Trivia Game Script Running")
         """
-        STEP 1:
+        STEPS 1 & 5:
         - Print a welcome message.
+		- Shuffle questions to make it random 
         - Loop through questions (or a subset) and call ask_question() each time.
         - After the loop, call show_score().
         """
-        """
-        STEP 5:
-	        - Use random.shuffle() on question_bank before the for loop to randomize.
-        """
+        print("Welcome to the World's Coolest Trivia Game!")
+		print("Let's see what you know - or don't know!!\n")
 
-        pass  # TODO: Implement the logic described above.
+	    # Shuffle the questions (just for fun!)
+	    random.shuffle(self.question_bank)
 
+	    # Loop through our AMAZING questions!
+	    for question in self.question_bank:
+			self.ask_question
+
+	    # Now that we're done, Lets see the score
 
     def ask_question(self, question):
         """
-        STEP 2 & 3:
+        STEPS 2 & 3:
         - Print the question and options, one per line.
         - Get the user's input with input().
+		- Let's omit the timer (this time)
         - Compare their answer (lowercased) to the correct answer.
         - If correct: print confirmation and increment self.score by 1.
         - If incorrect: show the correct answer.
         """
-        pass  # TODO: Implement the logic described above.
+        print(question["question"]:
+		for option in question["options"]:
+            print(option)
+		
+        # Here's the timer logic (just in case we change our minds...)
+	    # start_time = time.time()
+	    # answer = input("Type your choice (a/b/c/d) and press Enter: ")
+	    # elapsed = time.time() - start_time
 
+	    # if elapsed > 5:  # As best as I can tell, 5 sec is a completely arbitrary value
+	    #     print("Too Late!! No points for this question!\n")
+	    # else:
+	    #    # Normalize input and compare to correct answer
+	    #    if answer.strip().lower() == question["answer"].strip().lower():
+	    #        print("Correct!!\n")
+	    #    else:
+	    #        print("Sorry!! That's NOT correct.")
+	    #        print(f"The correct answer was: {question['answer']}\n")
+	
     def show_score(self):
         """
         STEP 4:
         - Print a final summary, e.g., "Game Over! You scored X out of Y."
         """
-        pass  # TODO: Implement final score display.
-
+        print("Game Over!")
+		print(f"You sscored {self.score} out of {len(self.question_bank)}.")
 
 if __name__ == "__main__":
     game = TriviaGame(question_bank)
